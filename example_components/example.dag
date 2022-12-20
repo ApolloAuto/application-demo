@@ -1,0 +1,24 @@
+# Define all coms in DAG streaming.
+    module_config {
+    module_library : "/opt/apollo/neo/packages/example-components-dev/latest/lib/libcomponent_examples.so"
+    timer_components {
+        class_name : "TimerCommonComponentSample"
+        config {
+            name : "CommonComponent"
+            interval : 10
+        }
+      }
+
+    components {
+        class_name : "CommonComponentSample"
+        config {
+            name : "example"
+            readers {
+                channel: "/apollo/channel_example/driver_test"
+            }
+            readers {
+                channel: "/apollo/channel_example/driver_test2"
+            }
+        }
+      }
+    }

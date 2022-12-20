@@ -1,0 +1,7 @@
+<cyber>
+    <module>
+        <name>example</name>
+        <dag_conf>/opt/apollo/neo/packages/example-components-dev/latest/dag/example.dag</dag_conf>
+        <process_name>example</process_name>
+    </module>
+</cyber>
